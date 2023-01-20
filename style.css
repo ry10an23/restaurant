@@ -8,6 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #ede5da;
+  color: #201b17;
+  height: 1000px;
+}
+
 a {
   text-decoration: none;
 }
@@ -122,4 +128,21 @@ img {
 
 #header .menu li {
   margin-bottom: 20px;
+}
+
+/************************************ 
+  MAIN VISUAL
+*************************************/
+
+.main_visual {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.main_visual img {
+  width: calc(100% / 3);
+  height: 100vh;
+  flex-shrink: 0;
+  object-fit: cover;
 }
