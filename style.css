@@ -187,16 +187,19 @@ main > section {
   text-align: left;
 }
 
-.about_detail > img {
+.about_detail > img.fadein {
   /* border: 1px solid blue; */
   width: 850px;
   height: 650px;
   opacity: 0.8;
   object-fit: cover;
   margin-left: 250px;
+  opacity: 0;
+  transform: translate(-10%, 0);
+  transition: 2s;
 }
 
-.about_detail > p {
+.about_detail > p.fadein {
   /* border: 1px solid green; */
   color: #ede5da;
   background-color: #808164;
@@ -205,4 +208,17 @@ main > section {
   position: absolute;
   bottom: -50px;
   right: 300px;
+  opacity: 0;
+  transform: translate(10%, 0);
+  transition: 2s;
+}
+
+.about_detail > img.show,
+.about_detail > p.show {
+  transform: translate(0, 0);
+  opacity: 0.9;
+}
+
+.about_detail > img.show {
+  opacity: 0.8;
 }
