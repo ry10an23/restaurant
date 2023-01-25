@@ -92,3 +92,27 @@ const mv_scale = () => {
 // };
 
 // setInterval(slideShow_timer, 3000);
+
+/*=================================================
+    ABOUT CONTENTS FADE-IN
+===================================================*/
+let aboutPic = document.querySelector(".about_pic");
+let aboutDesc = document.querySelector(".about_desc");
+
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+  let windowHeight = window.innerHeight;
+
+  let targetAboutPic = aboutPic.getBoundingClientRect().top + scroll;
+  let targetAboutDesc = aboutDesc.getBoundingClientRect().top + scroll;
+  if (scroll > targetAboutPic - windowHeight) {
+    if (aboutPic.classList.contains("fadein")) {
+      aboutPic.classList.add("show");
+    }
+  }
+  if (scroll > targetAboutDesc - windowHeight) {
+    if (aboutDesc.classList.contains("fadein")) {
+      aboutDesc.classList.add("show");
+    }
+  }
+});
