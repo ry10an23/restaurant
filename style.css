@@ -222,3 +222,29 @@ main > section {
 .about_detail > img.show {
   opacity: 0.8;
 }
+
+/************************************ 
+  HANDMADE
+*************************************/
+
+.process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.process.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.process > img {
+  width: 300px;
+  height: 300px;
+}
+
+.process > p {
+  width: 400px;
+  display: inline;
+}
