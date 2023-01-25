@@ -248,3 +248,116 @@ main > section {
   width: 400px;
   display: inline;
 }
+
+/************************************ 
+  menu
+*************************************/
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  width: 230px;
+  height: 325px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  perspective: 1000px;
+  transform: perspective(1000px) translateY(0);
+  transition: transform 0.8s ease-in-out;
+}
+
+.card.drak {
+  background-color: #31237c;
+  color: #fbfbfb;
+}
+.card.dark .flip-card > a {
+  border: 1px solid indianred;
+}
+
+.card.light {
+  background-color: #fbfbfb;
+  color: #272727;
+}
+
+.card.light .flip-card > a {
+  border: 1px solid indianred;
+}
+
+.card-container {
+  display: flex;
+}
+
+.card-wrapper:hover .card {
+  transform: rotateY(179deg);
+  z-index: 2;
+}
+
+.card-wrapper:hover .card .text-overlay {
+  opacity: 0;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.card-wrapper:hover .card .flip-card {
+  opacity: 1;
+}
+
+.text-overlay {
+  transform: perspective(1000px) translateY(0) translateZ(80px);
+  transition: transform 0.8s ease-in-out, opacity 1s ease;
+  pointer-events: none;
+  width: 100%;
+  perspective: inherit;
+  padding-top: 50px;
+}
+
+#menu h2 {
+  color: rgb(109 66 255);
+}
+
+#menu h3 {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.pasta-img > img {
+  width: 192px;
+  height: 192px;
+  margin: 20px;
+}
+
+.flip-card {
+  color: indianred;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  transform: perspective(1000px) rotateY(179deg) translateY(0) translateZ(80px);
+  opacity: 0;
+  z-index: -1;
+  transform: transform 0.8s ease-in-out, opacity 1s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card > a.menu-btn {
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+}
+
+.flip-card > a.menu-btn.light:hover {
+  background-color: indianred;
+  color: #fbfbfb;
+}
