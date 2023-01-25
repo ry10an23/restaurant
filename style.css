@@ -160,3 +160,32 @@ main > section {
   border: 1px solid red;
   margin: 80px 0;
 }
+
+/************************************ 
+  ABOUT VISUAL
+*************************************/
+.about_detail {
+  display: flex;
+  position: relative;
+  text-align: left;
+}
+
+.about_detail > img {
+  /* border: 1px solid blue; */
+  width: 850px;
+  height: 650px;
+  opacity: 0.8;
+  object-fit: cover;
+  margin-left: 250px;
+}
+
+.about_detail > p {
+  /* border: 1px solid green; */
+  color: #ede5da;
+  background-color: #808164;
+  width: 800px;
+  padding: 80px;
+  position: absolute;
+  bottom: -50px;
+  right: 300px;
+}
