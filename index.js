@@ -51,3 +51,44 @@ const mv_scale = () => {
     }
   });
 };
+
+/*=================================================
+    MAIN VISUAL IMG SLIDER
+===================================================*/
+// const pics_src_left = [
+//   "./img/UNISCALLOP.PNG",
+//   "./img/croquette.PNG",
+//   "./img/maccha_cake.JPG",
+// ];
+// let num_left = 0;
+
+// const pics_src_centre = [
+//   "./img/SAKURASTORY.PNG",
+//   "./img/burrata.jpg",
+//   "./img/UMESHU.PNG",
+// ];
+// let num_centre = 0;
+
+// const pics_src_right = [
+//   "./img/GNOCCHI.PNG",
+//   "./img/wagyu.jpg",
+//   "./img/tiramisu.jpg",
+// ];
+// let num_right = 0;
+
+// const slideShow_timer = () => {
+//   if (num_left && num_centre && num_right === 2) {
+//     num_left = 0;
+//     num_centre = 0;
+//     num_right = 0;
+//   } else {
+//     num_left++;
+//     num_centre++;
+//     num_right++;
+//   }
+//   document.getElementById("left").src = pics_src_left[num_left];
+//   document.getElementById("centre").src = pics_src_centre[num_centre];
+//   document.getElementById("right").src = pics_src_right[num_right];
+// };
+
+// setInterval(slideShow_timer, 3000);
