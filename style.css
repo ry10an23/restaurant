@@ -174,7 +174,7 @@ h2.section_title {
 } */
 
 main > section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 80px 0;
 }
 
@@ -253,17 +253,18 @@ main > section {
   menu
 *************************************/
 #menu {
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  /* column-gap: 20px; */
 }
 
 .card {
-  width: 230px;
-  height: 325px;
+  /* width: 30%; */
+  height: 405px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   perspective: 1000px;
@@ -271,8 +272,7 @@ main > section {
   transition: transform 0.8s ease-in-out;
 }
 
-.card.drak {
-  background-color: #31237c;
+.card.light {
   color: #fbfbfb;
 }
 .card.dark .flip-card > a {
@@ -280,16 +280,27 @@ main > section {
 }
 
 .card.light {
+  width: 100%;
   background-color: #fbfbfb;
   color: #272727;
 }
 
-.card.light .flip-card > a {
+/* .card.light .flip-card > a {
   border: 1px solid indianred;
-}
+} */
 
 .card-container {
+  /* border: 1px solid green; */
+  width: 100%; /*カードの1列の全体幅を調整*/
   display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.card-wrapper {
+  /* border: 3px solid violet; */
+  width: 22%; /*背景が白の部分の幅を調整*/
 }
 
 .card-wrapper:hover .card {
@@ -308,16 +319,17 @@ main > section {
 }
 
 .text-overlay {
+  /* border: 1px solid blue; */
   transform: perspective(1000px) translateY(0) translateZ(80px);
   transition: transform 0.8s ease-in-out, opacity 1s ease;
   pointer-events: none;
   width: 100%;
   perspective: inherit;
-  padding-top: 50px;
+  margin-top: 50px;
 }
 
 #menu h2 {
-  color: rgb(109 66 255);
+  color: #000;
 }
 
 #menu h3 {
@@ -326,14 +338,22 @@ main > section {
   font-weight: 300;
 }
 
-.pasta-img > img {
-  width: 192px;
-  height: 192px;
-  margin: 20px;
+.pasta-img > img,
+.appetizer-img > img,
+.drink-img > img,
+.dessert-img > img {
+  width: 230px;
+  height: 270px;
+  /* width: 60%;
+  height: 60%; */
+  opacity: 0.8;
+  margin-top: 15%;
+  object-fit: cover;
 }
 
 .flip-card {
-  color: indianred;
+  background-color: #aeae90;
+  /* color: indianred; */
   position: absolute;
   display: flex;
   justify-content: center;
@@ -344,20 +364,74 @@ main > section {
   transform: perspective(1000px) rotateY(179deg) translateY(0) translateZ(80px);
   opacity: 0;
   z-index: -1;
-  transform: transform 0.8s ease-in-out, opacity 1s ease;
+  transition: transform 0.8s ease-in-out, opacity 1s ease;
   width: 100%;
   height: 100%;
 }
 
+.flip-card span {
+  /* border: 1px solid blue; */
+  padding: 50px 30px;
+}
+
 .flip-card > a.menu-btn {
+  color: inherit;
   padding: 10px 40px;
-  border-radius: 50px;
   font-size: 1.2rem;
   transition: background-color 0.25s ease, color 0.25s ease;
   cursor: pointer;
+  position: relative;
 }
 
-.flip-card > a.menu-btn.light:hover {
-  background-color: indianred;
-  color: #fbfbfb;
+.flip-card > a.menu-btn {
+  outline: 1px solid;
+  outline-color: #7b7b66;
+  outline-offset: 0px;
+  width: 200px;
+  display: block;
+  padding: 30px 0;
+  margin: 0 auto 40px;
+  transition: 0.3s;
+}
+
+.flip-card > a.menu-btn:hover {
+  outline-color: #515143;
+  animation: light 0.8s infinite;
+}
+
+@keyframes light {
+  100% {
+    outline-color: transparent;
+    outline-offset: 12px;
+  }
+}
+
+/* .flip-card > a.menu-btn::before,
+.flip-card > a.menu-btn::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  height: 2px;
+  background-color: #000;
+  transition: 0.6s;
+}
+
+.flip-card > a.menu-btn::before {
+  width: 120px;
+  top: 48px;
+}
+
+.flip-card > a.menu-btn:after {
+  width: 15px;
+  top: 45px;
+  transform: rotate(25deg);
+}
+
+.flip-card > a.menu-btn:hover {
+  opacity: 0.7;
+}
+
+.flip-card > a.menu-btn:hover::before,
+.flip-card > a.menu-btn:hover::after {
+  right: -10px;
 }
