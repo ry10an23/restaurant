@@ -460,3 +460,19 @@ main > section {
 .flip-card > a.menu-btn:hover::after {
   right: -10px;
 } */
+
+/************************************ 
+  ACCESS
+*************************************/
+#access_businessHour > .map {
+  border: 1px solid red;
+}
+
+#access_businessHour iframe {
+  width: 70%;
+  opacity: 0.8;
+}
+
+.access_detail {
+  display: flex;
+}
