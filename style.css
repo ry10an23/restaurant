@@ -486,3 +486,44 @@ main > section {
   margin-top: 30px;
   margin-bottom: 15px;
 }
+
+/************************************ 
+  Footer
+*************************************/
+#footer {
+  background-color: #808164;
+  font-size: 1.25rem;
+  padding: 30px 0px;
+}
+
+#footer a {
+  color: #fff;
+}
+.footer_option {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer_option ul {
+  width: 20%;
+  /* border: 1px solid blue; */
+}
+
+.footer_option ul.logo {
+  width: 40%;
+}
+
+.footer_option img {
+  width: 20%;
+}
+
+.sns {
+  display: grid;
+  grid-template-columns: 100px 100px;
+}
+
+.sns i {
+  /* border: 1px solid green; */
+  font-size: 3rem;
+  width: 50%;
+}
