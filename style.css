@@ -9,6 +9,10 @@ html {
 }
 
 body {
+  font-family: "Parisienne", cursive;
+  font-family: "Playball", cursive;
+  font-family: "Source Sans Pro", sans-serif;
+  font-family: "EB Garamond", serif;
   background-color: #ede5da;
   color: #201b17;
   height: 1000px;
@@ -32,10 +36,12 @@ img {
 *************************************/
 
 #container {
+  font-family: "EB Garamond", sans-serif;
   text-align: center;
 }
 
 h2.section_title {
+  font-family: "Parisienne", sans-serif;
   font-size: 3.75rem;
   font-weight: 300;
   letter-spacing: 0.03em;
