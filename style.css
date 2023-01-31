@@ -348,7 +348,8 @@ main > section {
 .appetizer-img > img,
 .drink-img > img,
 .dessert-img > img {
-  width: 230px;
+  /* width: 230px; */
+  width: 75%;
   height: 270px;
   /* width: 60%;
   height: 60%; */
