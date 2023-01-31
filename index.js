@@ -114,3 +114,42 @@ window.addEventListener("scroll", () => {
     }
   }
 });
+
+/*=================================================
+    HANDMADE STEP FADE-IN
+===================================================*/
+let processLefts = document.querySelectorAll(".left");
+let processRights = document.querySelectorAll(".right");
+
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+  let windowHeight = window.innerHeight;
+
+  for (let processLeft of processLefts) {
+    let targetProcessLeft = processLeft.getBoundingClientRect().top + scroll;
+    if (scroll > targetProcessLeft - windowHeight) {
+      if (processLeft.classList.contains("fadein")) {
+        processLeft.classList.add("show");
+      }
+    }
+  }
+  for (let processRight of processRights) {
+    let targetProcessRight = processRight.getBoundingClientRect().top + scroll;
+    if (scroll > targetProcessRight - windowHeight) {
+      if (processRight.classList.contains("fadein")) {
+        processRight.classList.add("show");
+      }
+    }
+  }
+
+  // if (scroll > targetProcessLeft - windowHeight) {
+  //   if (processLeft.classList.contains("fadein")) {
+  //     processLeft.classList.add("show");
+  //   }
+  // }
+  // if (scroll > targetProcessRight - windowHeight) {
+  //   if (processRight.classList.contains("fadein")) {
+  //     processRight.classList.add("show");
+  //   }
+  // }
+});
