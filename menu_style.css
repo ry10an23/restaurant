@@ -30,3 +30,12 @@ img {
   max-width: 100%;
   vertical-align: bottom;
 }
+
+/************************************ 
+    COMMON
+  *************************************/
+
+#container {
+  font-family: "EB Garamond", sans-serif;
+  text-align: center;
+}
