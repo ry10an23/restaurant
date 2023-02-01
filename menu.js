@@ -19,3 +19,17 @@ function hamburgerMenu() {
     hamburgerBtn.classList.remove("active");
   }
 }
+
+/*=================================================
+    MAIN VISUAL SLIDE-IN
+===================================================*/
+let illustration = document.querySelector(".menu_illustration");
+let menu_title = document.querySelector(".title");
+
+window.addEventListener("load", () => {
+  illustration.classList.contains("fadein");
+  illustration.classList.add("show");
+
+  menu_title.classList.contains("fadein");
+  menu_title.classList.add("show");
+});
