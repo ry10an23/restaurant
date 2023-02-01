@@ -24,72 +24,54 @@ function hamburgerMenu() {
   }
 }
 
-window.addEventListener("scroll", function () {
-  let scroll = window.pageYOffset;
-  mv_scale(scroll);
-});
+// window.addEventListener("scroll", function () {
+//   let scroll = window.pageYOffset;
+//   mv_scale(scroll);
+// });
 
 /*=================================================
     RESCALING MAIN VISUAL SCALING (COMMON PROCESS)
 ===================================================*/
-const mv_scale = () => {
-  window.addEventListener("scroll", () => {
-    if (window.innerWidth > 900) {
-      const currentY = window.pageYOffset;
-      let imgs = document.getElementsByClassName("main_pic");
-      for (const img of imgs) {
-        img.style.width = 100 / 3 + currentY / 10 + "%";
-      }
-    } else {
-      const currentY = window.pageYOffset;
-      let imgs = document.getElementsByClassName("main_pic");
-      for (const img of imgs) {
-        img.style.width = 100 - currentY / 10 + "%";
-      }
-    }
-  });
-};
+// const mv_scale = () => {
+//   window.addEventListener("scroll", () => {
+//     if (window.innerWidth > 900) {
+//       const currentY = window.pageYOffset;
+//       let imgs = document.getElementsByClassName("main_pic");
+//       for (const img of imgs) {
+//         img.style.width = 100 / 3 + currentY / 10 + "%";
+//       }
+//     } else {
+//       const currentY = window.pageYOffset;
+//       let imgs = document.getElementsByClassName("main_pic");
+//       for (const img of imgs) {
+//         img.style.width = 100 - currentY / 10 + "%";
+//       }
+//     }
+//   });
+// };
 
 /*=================================================
     MAIN VISUAL IMG SLIDER
 ===================================================*/
-// const pics_src_left = [
-//   "./img/UNISCALLOP.PNG",
-//   "./img/croquette.PNG",
-//   "./img/maccha_cake.JPG",
-// ];
-// let num_left = 0;
+const pics_src = [
+  "./img/UNISCALLOP.PNG",
+  "./img/wasta_wall.jpg",
+  "./img/wasutapastadron.PNG",
+  "./img/GNOCCHI.PNG",
+  "./img/pasta.jpg",
+];
+let num = 0;
 
-// const pics_src_centre = [
-//   "./img/SAKURASTORY.PNG",
-//   "./img/burrata.jpg",
-//   "./img/UMESHU.PNG",
-// ];
-// let num_centre = 0;
+const slideShow_timer = () => {
+  if (num === 2) {
+    num = 0;
+  } else {
+    num++;
+  }
+  document.getElementById("left").src = pics_src[num];
+};
 
-// const pics_src_right = [
-//   "./img/GNOCCHI.PNG",
-//   "./img/wagyu.jpg",
-//   "./img/tiramisu.jpg",
-// ];
-// let num_right = 0;
-
-// const slideShow_timer = () => {
-//   if (num_left && num_centre && num_right === 2) {
-//     num_left = 0;
-//     num_centre = 0;
-//     num_right = 0;
-//   } else {
-//     num_left++;
-//     num_centre++;
-//     num_right++;
-//   }
-//   document.getElementById("left").src = pics_src_left[num_left];
-//   document.getElementById("centre").src = pics_src_centre[num_centre];
-//   document.getElementById("right").src = pics_src_right[num_right];
-// };
-
-// setInterval(slideShow_timer, 3000);
+setInterval(slideShow_timer, 3000);
 
 /*=================================================
     ABOUT CONTENTS FADE-IN
