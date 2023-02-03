@@ -528,3 +528,9 @@ main > section {
   font-size: 3rem;
   width: 50%;
 }
+
+/************************************ 
+  Smart Phone 900px
+*************************************/
+@media screen and (max-width: 900px) {
+}
