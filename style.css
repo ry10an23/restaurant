@@ -13,6 +13,7 @@ body {
   font-family: "Playball", cursive;
   font-family: "Source Sans Pro", sans-serif;
   font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
   background-color: #ede5da;
   color: #201b17;
   height: 1000px;
@@ -158,7 +159,6 @@ h2.section_title {
 *************************************/
 
 .main_visual {
-  border: 1px blue solid;
   width: 100%;
   /* height: 100vh; */
   /* display: flex;
@@ -169,7 +169,6 @@ h2.section_title {
 
 .main_visual img {
   /* width: calc(100% / 3); */
-  border: 1px red solid;
   width: 100%;
   height: 100vh;
   flex-shrink: 0;
@@ -365,7 +364,7 @@ main > section {
 }
 
 #menu h3 {
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   text-align: center;
   font-weight: 300;
 }
@@ -424,17 +423,6 @@ main > section {
   transition: 0.3s;
 }
 
-/* .flip-card > a.menu-btn {
-  outline: 1px solid;
-  outline-color: #7b7b66;
-  outline-offset: 0px;
-  width: 200px;
-  display: block;
-  padding: 30px 0;
-  margin: 0 auto 40px;
-  transition: 0.3s;
-} */
-
 .flip-card > a.menu-btn:hover {
   outline-color: #515143;
   animation: light 0.8s infinite;
@@ -464,36 +452,6 @@ main > section {
   }
 }
 
-/* .flip-card > a.menu-btn::before,
-.flip-card > a.menu-btn::after {
-  content: "";
-  position: absolute;
-  right: 20px;
-  height: 2px;
-  background-color: #000;
-  transition: 0.6s;
-}
-
-.flip-card > a.menu-btn::before {
-  width: 120px;
-  top: 48px;
-}
-
-.flip-card > a.menu-btn:after {
-  width: 15px;
-  top: 45px;
-  transform: rotate(25deg);
-}
-
-.flip-card > a.menu-btn:hover {
-  opacity: 0.7;
-}
-
-.flip-card > a.menu-btn:hover::before,
-.flip-card > a.menu-btn:hover::after {
-  right: -10px;
-} */
-
 /************************************ 
   ACCESS
 *************************************/
@@ -520,6 +478,12 @@ main > section {
   margin-bottom: 15px;
 }
 
+.date_2,
+.date_3,
+.notice {
+  margin-top: 20px;
+}
+
 /************************************ 
   Footer
 *************************************/
@@ -540,6 +504,10 @@ main > section {
 .footer_option ul {
   width: 20%;
   /* border: 1px solid blue; */
+}
+
+.footer_menu > li {
+  margin-bottom: 10px;
 }
 
 .footer_option ul.logo {
