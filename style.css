@@ -202,11 +202,11 @@ main > section {
 
 .about_detail > img.fadein {
   /* border: 1px solid blue; */
-  width: 850px;
-  height: 650px;
+  width: 40%;
+  /* height: 650px; */
   opacity: 0.8;
   object-fit: cover;
-  margin-left: 250px;
+  margin-left: 200px;
   opacity: 0;
   transform: translate(-10%, 0);
   transition: 2s;
@@ -216,11 +216,11 @@ main > section {
   /* border: 1px solid green; */
   color: #ede5da;
   background-color: #808164;
-  width: 800px;
-  padding: 80px;
+  width: 40%;
+  padding: 60px;
   position: absolute;
   bottom: -50px;
-  right: 300px;
+  right: 150px;
   opacity: 0;
   transform: translate(10%, 0);
   transition: 2s;
@@ -476,6 +476,10 @@ main > section {
 .access_detail .sub_title {
   margin-top: 30px;
   margin-bottom: 15px;
+}
+
+.access_detail a {
+  color: inherit;
 }
 
 .date_2,
